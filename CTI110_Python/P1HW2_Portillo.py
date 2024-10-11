@@ -13,19 +13,29 @@
 9. Subtract expenses from budget
 10. Display results
 '''
+budget = 0.00
+gas = 0.00
+hotel = 0.00
+food = 0.00
+budget = 0.00
+expenses = gas + hotel + food
+balance = gas + hotel + food - budget
+
+
 print(" Trip Calculator ")
 # Ask user to enter their budget
 budget = float(input("What is your travel budget? $ "))
 # Ask user to enter travel destination
-destination = input("Where are you going?")
+destination = input("Where are you going? ")
 # Ask user for amount they will spend on gas
-gas = input("How much will you spend on gas?")
-# Ask user for amount they will spend on accommidation
-hotel = input ("How much wil you spend on lodging?")
-# Ask user for amunt they will spend on food
-food = input ("How much will you spend on food?")
+gas = float(input("How much will you spend on gas? $"))
+# Ask user for amount they will spend on accommodation
+hotel = float(input("How much will you spend on lodging? $"))
+# Ask user for amount they will spend on food
+food = float(input("How much will you spend on food? $"))
 # Add expenses
-
-# Subtrat expenses from budget
-
+expenses = gas + hotel + food
+# Subtract expenses from budget
+balance = budget - (gas + hotel + food)
 # Display Results 
+print("balance", balance,)
